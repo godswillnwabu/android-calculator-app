@@ -1,7 +1,6 @@
 # Android Calculator 
 
-[Live url site](https://github.com/godswillnwabu/android-calculator-app.git
-). 
+[Live url site](https://godswillnwabu.github.io/android-calculator-app/). 
 
 ### Screenshot
 
