@@ -1,0 +1,142 @@
+:root {
+    --white: rgb(233,234,236);
+    --whitish: rgb(241,242,244);
+    --blue: rgb(3,31,70);
+    --bgcolor: rgb(125,183,221);
+    --bgcolor2: rgb(81,137,170);
+    --bgcolor3: rgb(209,230,247);
+    --shadow: rgba(0 0 0 / 0.2);
+    --grey: rgb(102,102,102);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Dots', cursive, serif;
+}
+body {
+    background: linear-gradient(65deg, var(--blue), var(--white));
+    width: 100%;
+    min-height: 100vh;
+}
+.calculator {
+    min-width: 300px;
+    height: fit-content;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 50px;
+    box-shadow: 8px 4px 15px var(--shadow);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+.barHeading {
+    display: flex;
+    background-color: inherit;
+    justify-content: space-between;
+}
+div >.receptors {
+    display: flex;
+    justify-content: center;
+}
+div >#speaker {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(0,0,0);
+    border-radius: 3px;
+    cursor: not-allowed;
+}
+div >#censor {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0,0,0);
+    border-radius: 45%;
+    position: absolute;
+    left: 50px;
+    cursor: not-allowed;
+}
+#result {
+    height: 100px;
+    width: 260px;
+    box-shadow:  0.2rem 0.2rem 3px var(--shadow), -0.2rem -0.2rem 3px var(--whitish);
+    border-radius: 7px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+#history {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: #666;
+}
+#output {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+button {
+    text-align: center;
+    padding: 10px;
+    color: var(--blue);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px var(--shadow), -0.1rem -0.1rem 3px var(--whitish);
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+button:active {
+    background-color: var(--bgcolor);
+    box-shadow: 2px 1px 3px var(--grey);
+    transform: translateY(4px);
+}
+.number {
+    color: var(--shadow);
+    font-weight: bold;
+}
+.operator {
+    color: var(--blue);
+    font-weight: bold;
+}
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); */
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.equal {
+    grid-column: span 2;
+}
+.fontAwesome2 {
+    display: flex;
+    height: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.homeBtn {
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--blue);
+    border: 2px solid var(--bgcolor2);
+}
+footer  {
+    color: var(--blue);
+    font-weight: bold;
+}
